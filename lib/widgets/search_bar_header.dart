@@ -8,6 +8,7 @@ class SearchBarHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.of(context).size.width,
       color: Colors.blue[700],
       padding: const EdgeInsets.fromLTRB(0, 10, 15, 10),
       child: Row(
@@ -24,7 +25,9 @@ class SearchBarHeader extends StatelessWidget {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(3)),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(3),
+              ),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,7 +40,7 @@ class SearchBarHeader extends StatelessWidget {
                     ),
                   ),
                   const Text(
-                    "Search for Products, Brands and Deals",
+                    "Search for Products, Brands ....",
                     style: TextStyle(color: Colors.grey),
                   ),
                   Container(

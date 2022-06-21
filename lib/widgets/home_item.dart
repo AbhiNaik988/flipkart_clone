@@ -1,13 +1,12 @@
+import 'package:flipcart_ui/models/colors_model.dart';
 import 'package:flutter/material.dart';
 
 class HomeItem extends StatelessWidget {
+  final ItemColor item;
   const HomeItem({
     Key? key,
-    required double countainer_width,
-  })  : _countainer_width = countainer_width,
-        super(key: key);
-
-  final double _countainer_width;
+    required this.item,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,39 +14,42 @@ class HomeItem extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.only(top: 27),
-          width: MediaQuery.of(context).size.width * 0.21,
-          height: MediaQuery.of(context).size.height * 0.09,
+          width: 70,
+          height: 60,
           alignment: AlignmentDirectional.bottomCenter,
           decoration: BoxDecoration(
-            color: Colors.yellow[200],
-            borderRadius: BorderRadius.circular(10),
+            color: item.boxColor,
+            borderRadius: BorderRadius.circular(5),
           ),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(5, 0, 5, 7),
             child: Text(
-              "SuperCoin",
+              item.text,
+              textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.orange[900],
+                color: item.textColor,
+                overflow: TextOverflow.visible,
+                fontSize: 12,
               ),
             ),
           ),
         ),
         Positioned(
           top: 0,
-          left: _countainer_width / 8,
+          left: 10,
           child: Container(
-            height: 65,
-            width: _countainer_width,
+            height: 50,
+            width: 50,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(50),
               color: Colors.white,
               border: Border.all(
-                color: const Color.fromARGB(255, 244, 231, 118),
+                color: item.circleBorderColor,
               ),
             ),
             child: Icon(
-              Icons.contactless_rounded,
-              color: Colors.yellow[800],
+              item.ceneredIcon,
+              color: item.iconColor,
               size: 40,
             ),
           ),
