@@ -49,13 +49,15 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedIconTheme: const IconThemeData(color: Colors.blue),
         unselectedItemColor: Colors.black,
         currentIndex: navTapIndex,
+        unselectedFontSize: 12,
+        selectedFontSize: 12,
         items: const [
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.category), label: "Categories"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.notifications_outlined), label: "Notifications"),
+              icon: Icon(Icons.notifications_outlined), label: "Alerts"),
           BottomNavigationBarItem(
               icon: Icon(Icons.account_circle_outlined), label: "Account"),
           BottomNavigationBarItem(
