@@ -1,8 +1,8 @@
-import 'package:flipcart_ui/screens/account.dart';
-import 'package:flipcart_ui/screens/cart.dart';
-import 'package:flipcart_ui/screens/categories.dart';
-import 'package:flipcart_ui/screens/home.dart';
-import 'package:flipcart_ui/screens/notification.dart';
+import 'package:flipcart_ui/screens/sub_screens/account.dart';
+import 'package:flipcart_ui/screens/sub_screens/cart.dart';
+import 'package:flipcart_ui/screens/sub_screens/categories.dart';
+import 'package:flipcart_ui/screens/sub_screens/home.dart';
+import 'package:flipcart_ui/screens/sub_screens/notification.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
