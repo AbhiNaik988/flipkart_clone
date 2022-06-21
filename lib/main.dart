@@ -1,4 +1,4 @@
-import 'package:flipcart_ui/screens/home_screen.dart';
+import 'package:flipcart_ui/screens/main_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const MainScreen(),
     );
   }
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import '../../widgets/home_list_itmes.dart';
-import '../../widgets/image_carousol.dart';
-import '../../widgets/search_bar_header.dart';
+import '../../widgets/items/group_of_three_items.dart';
+import '../../widgets/items/home_list_options.dart';
+import '../../widgets/items/image_carousol_item.dart';
+import '../../widgets/items/search_bar_item.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -10,11 +11,17 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.grey[200],
         body: Column(
           children: const [
             SearchBarHeader(),
-            HomeListItems(),
+            SizedBox(height: 5),
+            HomeListOptions(),
+            SizedBox(height: 5),
             ImageCarousel(),
+            SizedBox(height: 5),
+            GroupOfThreeItems(),
+            SizedBox(height: 5)
           ],
         ),
       ),

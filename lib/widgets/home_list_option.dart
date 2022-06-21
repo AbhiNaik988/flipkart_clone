@@ -1,9 +1,9 @@
 import 'package:flipcart_ui/models/colors_model.dart';
 import 'package:flutter/material.dart';
 
-class HomeItem extends StatelessWidget {
+class HomeListOption extends StatelessWidget {
   final ItemColor item;
-  const HomeItem({
+  const HomeListOption({
     Key? key,
     required this.item,
   }) : super(key: key);

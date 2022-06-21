@@ -5,14 +5,14 @@ import 'package:flipcart_ui/screens/sub_screens/home.dart';
 import 'package:flipcart_ui/screens/sub_screens/notification.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class MainScreen extends StatefulWidget {
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MainScreenState extends State<MainScreen> {
   final PageController pageController = PageController();
   int navTapIndex = 0;
 
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.blue,
         selectedIconTheme: const IconThemeData(color: Colors.blue),
-        unselectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
         currentIndex: navTapIndex,
         unselectedFontSize: 12,
         selectedFontSize: 12,
