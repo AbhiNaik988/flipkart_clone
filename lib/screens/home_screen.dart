@@ -1,4 +1,8 @@
+import 'package:flipcart_ui/screens/account.dart';
+import 'package:flipcart_ui/screens/cart.dart';
+import 'package:flipcart_ui/screens/categories.dart';
 import 'package:flipcart_ui/screens/home.dart';
+import 'package:flipcart_ui/screens/notification.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,10 +37,10 @@ class _HomeScreenState extends State<HomeScreen> {
         physics: const NeverScrollableScrollPhysics(),
         children: const [
           Home(),
-          Center(child: Text("Categories")),
-          Center(child: Text("Notifications")),
-          Center(child: Text("Account")),
-          Center(child: Text("Cart")),
+          CategoriesScreen(),
+          NotificationScreen(),
+          AccountScreen(),
+          CartScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -9,7 +9,7 @@ class SearchBarHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      color: Colors.blue[700],
+      color: Theme.of(context).primaryColor,
       padding: const EdgeInsets.fromLTRB(0, 10, 15, 10),
       child: Row(
         mainAxisSize: MainAxisSize.min,

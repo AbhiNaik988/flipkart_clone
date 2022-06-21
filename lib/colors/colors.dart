@@ -83,3 +83,16 @@ List<ItemColor> items = [
     iconColor: Colors.blue[500],
   ),
 ];
+
+Map<int, Color> mapColor = {
+  50: const Color.fromRGBO(227, 242, 253, 1),
+  100: const Color.fromRGBO(187, 222, 251, 1),
+  200: const Color.fromRGBO(144, 202, 249, 1),
+  300: const Color.fromRGBO(100, 181, 246, 1),
+  400: const Color.fromRGBO(66, 165, 245, 1),
+  500: const Color.fromRGBO(33, 150, 243, 1),
+  600: const Color.fromRGBO(30, 136, 229, 1),
+  700: const Color.fromRGBO(25, 118, 210, 1),
+  800: const Color.fromRGBO(21, 101, 192, 1),
+  900: const Color.fromRGBO(13, 71, 161, 1),
+};
