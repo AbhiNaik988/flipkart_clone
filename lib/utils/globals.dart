@@ -1,4 +1,4 @@
-import 'package:flipcart_ui/models/group_of_four_item_model.dart';
+import 'package:flipcart_ui/models/group_of_x_item_model.dart';
 import 'package:flipcart_ui/models/item_model.dart';
 import 'package:flutter/material.dart';
 
@@ -86,15 +86,28 @@ final List<ItemModel> groupOfTwoProducts = [
   ),
 ];
 
-final List<GroupOfFourItemModel> listGroupOfFourProducts = [
-  GroupOfFourItemModel(
+final List<GroupOfXItemModel> listGroupOfFourProducts = [
+  GroupOfXItemModel(
     title: "Discounts for You",
     backgroundColor: const Color.fromARGB(136, 123, 178, 218),
     children: groupOfFourProducts,
   ),
-  GroupOfFourItemModel(
+  GroupOfXItemModel(
     title: "Suggested Only for You",
     backgroundColor: const Color.fromARGB(135, 235, 245, 162),
     children: groupOfFourProducts,
+  ),
+];
+
+final List<GroupOfXItemModel> listGroupOfThreeProducts = [
+  GroupOfXItemModel(
+    title: "",
+    backgroundColor: Colors.white,
+    children: groupOfThreeProducts,
+  ),
+  GroupOfXItemModel(
+    title: "Sponsored",
+    backgroundColor: Colors.white,
+    children: groupOfThreeProducts,
   ),
 ];

@@ -1,10 +1,10 @@
-import 'package:flipcart_ui/models/group_of_four_item_model.dart';
+import 'package:flipcart_ui/models/group_of_x_item_model.dart';
 import 'package:flipcart_ui/utils/globals.dart';
 import 'package:flipcart_ui/widgets/group_of_four_item.dart';
 import 'package:flutter/material.dart';
 
 class GroupOfFourItems extends StatelessWidget {
-  final GroupOfFourItemModel itemModel;
+  final GroupOfXItemModel itemModel;
   const GroupOfFourItems({
     Key? key,
     required this.itemModel,
