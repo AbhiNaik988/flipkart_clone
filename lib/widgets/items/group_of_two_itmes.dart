@@ -1,11 +1,14 @@
-import 'package:flipcart_ui/utils/globals.dart';
+import 'package:flipcart_ui/widgets/group_of_four_item.dart';
+import 'package:flipcart_ui/widgets/group_of_two_item.dart';
 import 'package:flutter/material.dart';
 
-import '../group_of_two_item.dart';
+import '../../models/group_of_x_item_model.dart';
 
 class GroupOfTwoItems extends StatelessWidget {
+  final GroupOfXItemModel itemModel;
   const GroupOfTwoItems({
     Key? key,
+    required this.itemModel,
   }) : super(key: key);
 
   @override
@@ -16,13 +19,14 @@ class GroupOfTwoItems extends StatelessWidget {
       height: 250,
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey, width: 0.5),
-        color: Colors.white,
+        color: itemModel.backgroundColor,
       ),
       child: Row(
-        children: [
-          GroupOfTwoItem(item: groupOfTwoProducts[0]),
-          GroupOfTwoItem(item: groupOfTwoProducts[1]),
-        ],
+        children: itemModel.children
+            .map(
+              (item) => GroupOfTwoItem(item: item),
+            )
+            .toList(),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flipcart_ui/models/group_of_x_item_model.dart';
-import 'package:flipcart_ui/utils/globals.dart';
+import 'package:flipcart_ui/utils/sub_resource.dart';
 import 'package:flipcart_ui/widgets/group_of_four_item.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +51,7 @@ class GroupOfFourItems extends StatelessWidget {
             ],
           ),
           GridView.builder(
-            itemCount: groupOfFourProducts.length,
+            itemCount: groupOfFourProductsLN1.length,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

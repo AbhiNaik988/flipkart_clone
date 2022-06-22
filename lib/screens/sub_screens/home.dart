@@ -1,5 +1,6 @@
-import 'package:flipcart_ui/utils/globals.dart';
+import 'package:flipcart_ui/utils/sub_resource.dart';
 import 'package:flutter/material.dart';
+import '../../utils/resources.dart';
 import '../../widgets/items/group_of_four_items.dart';
 import '../../widgets/items/group_of_three_items.dart';
 import '../../widgets/items/group_of_two_itmes.dart';
@@ -27,9 +28,11 @@ class Home extends StatelessWidget {
             const SizedBox(height: 5),
             GroupOfFourItems(itemModel: listGroupOfFourProducts[0]),
             const SizedBox(height: 5),
-            const GroupOfTwoItems(),
+            GroupOfTwoItems(itemModel: listGroupOfTwoProducts[0]),
             const SizedBox(height: 5),
             GroupOfFourItems(itemModel: listGroupOfFourProducts[1]),
+            const SizedBox(height: 5),
+            GroupOfTwoItems(itemModel: listGroupOfTwoProducts[1]),
             const SizedBox(height: 5),
             GroupOfThreeItems(itemModel: listGroupOfThreeProducts[1]),
             const SizedBox(height: 5),

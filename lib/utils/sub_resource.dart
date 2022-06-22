@@ -1,4 +1,3 @@
-import 'package:flipcart_ui/models/group_of_x_item_model.dart';
 import 'package:flipcart_ui/models/item_model.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +9,7 @@ const List<String> adImageList = [
   "assets/flipkart_ad_img_5.jpeg",
 ];
 
-final List<ItemModel> groupOfThreeProducts = [
+final List<ItemModel> groupOfThreeProductsLN1 = [
   ItemModel(
     imgLocaion: "assets/realme_c30.jpg",
     text: "Sale on 27th June",
@@ -34,7 +33,7 @@ final List<ItemModel> groupOfThreeProducts = [
   ),
 ];
 
-final List<ItemModel> groupOfFourProducts = [
+final List<ItemModel> groupOfFourProductsLN1 = [
   ItemModel(
     imgLocaion: "assets/beard_oil.jpg",
     text: "Beard Oil",
@@ -65,7 +64,7 @@ final List<ItemModel> groupOfFourProducts = [
   ),
 ];
 
-final List<ItemModel> groupOfTwoProducts = [
+final List<ItemModel> groupOfTwoProductsLN1 = [
   ItemModel(
     imgLocaion: "assets/electronic.jpg",
     text: "Top Ranked Saving Await!",
@@ -83,31 +82,5 @@ final List<ItemModel> groupOfTwoProducts = [
     subTextColor: Colors.grey,
     thirdText: "Up to 70% Off",
     thirdTextColor: Colors.green,
-  ),
-];
-
-final List<GroupOfXItemModel> listGroupOfFourProducts = [
-  GroupOfXItemModel(
-    title: "Discounts for You",
-    backgroundColor: const Color.fromARGB(136, 123, 178, 218),
-    children: groupOfFourProducts,
-  ),
-  GroupOfXItemModel(
-    title: "Suggested Only for You",
-    backgroundColor: const Color.fromARGB(135, 235, 245, 162),
-    children: groupOfFourProducts,
-  ),
-];
-
-final List<GroupOfXItemModel> listGroupOfThreeProducts = [
-  GroupOfXItemModel(
-    title: "Sponsored",
-    backgroundColor: Colors.white,
-    children: groupOfThreeProducts,
-  ),
-  GroupOfXItemModel(
-    title: "",
-    backgroundColor: Colors.white,
-    children: groupOfThreeProducts,
   ),
 ];
