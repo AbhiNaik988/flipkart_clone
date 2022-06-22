@@ -6,6 +6,8 @@ class ItemModel {
   final Color? textColor;
   final String subText;
   final Color? subTextColor;
+  final String? thirdText;
+  final Color? thirdTextColor;
 
   ItemModel({
     required this.imgLocaion,
@@ -13,5 +15,7 @@ class ItemModel {
     required this.textColor,
     required this.subText,
     required this.subTextColor,
+    this.thirdText,
+    this.thirdTextColor,
   });
 }

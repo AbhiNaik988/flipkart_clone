@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/items/group_of_four_items.dart';
 import '../../widgets/items/group_of_three_items.dart';
+import '../../widgets/items/group_of_two_itmes.dart';
 import '../../widgets/items/home_list_options.dart';
 import '../../widgets/items/image_carousol_item.dart';
 import '../../widgets/items/search_bar_item.dart';
@@ -24,6 +25,8 @@ class Home extends StatelessWidget {
             GroupOfThreeItems(),
             SizedBox(height: 5),
             GroupOfFourItems(),
+            SizedBox(height: 5),
+            GroupOfTwoItems(),
           ],
         ),
       ),

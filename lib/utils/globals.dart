@@ -63,3 +63,24 @@ final List<ItemModel> groupOfFourProducts = [
     subTextColor: Colors.green,
   ),
 ];
+
+final List<ItemModel> groupOfTwoProducts = [
+  ItemModel(
+    imgLocaion: "assets/electronic.jpg",
+    text: "Top Ranked Saving Await!",
+    textColor: Colors.black,
+    subText: "Electronics & Accessories",
+    subTextColor: Colors.grey,
+    thirdText: "Up to 80% Off",
+    thirdTextColor: Colors.green,
+  ),
+  ItemModel(
+    imgLocaion: "assets/stationery.png",
+    text: "Top Rated Stationery Supplies",
+    textColor: Colors.black,
+    subText: "Classmate, Cello & more",
+    subTextColor: Colors.grey,
+    thirdText: "Up to 70% Off",
+    thirdTextColor: Colors.green,
+  ),
+];
