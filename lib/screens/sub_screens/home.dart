@@ -21,7 +21,6 @@ class Home extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
-                  const SizedBox(height: 5),
                   const HomeListOptions(),
                   const SizedBox(height: 5),
                   const ImageCarousel(),

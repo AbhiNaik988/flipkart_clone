@@ -1,7 +1,6 @@
 import 'package:flipcart_ui/models/group_of_x_item_model.dart';
 import 'package:flipcart_ui/widgets/group_of_four_item.dart';
 import 'package:flutter/material.dart';
-
 import '../../resources/sub_resources/group_of_four_lists.dart';
 
 class GroupOfFourItems extends StatelessWidget {
@@ -26,7 +25,6 @@ class GroupOfFourItems extends StatelessWidget {
         ),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,6 +49,7 @@ class GroupOfFourItems extends StatelessWidget {
               )
             ],
           ),
+          const SizedBox(height: 25),
           GridView.builder(
             itemCount: groupOfFourProductsLN1.length,
             shrinkWrap: true,
