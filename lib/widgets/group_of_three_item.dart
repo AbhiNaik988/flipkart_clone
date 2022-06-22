@@ -52,17 +52,16 @@ class GroupOfThreeItem extends StatelessWidget {
                       fit: BoxFit.fitWidth,
                       child: Text(
                         item.text,
-                        style:
-                            const TextStyle(fontSize: 12, color: Colors.black),
+                        style: TextStyle(fontSize: 12, color: item.textColor),
                       ),
                     ),
                     FittedBox(
                       fit: BoxFit.fitWidth,
                       child: Text(
                         item.subText,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 10,
-                          color: Colors.grey,
+                          color: item.subTextColor,
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
