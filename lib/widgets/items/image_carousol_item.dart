@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/sub_resource.dart';
+import '../../resources/resources.dart';
 
 class ImageCarousel extends StatefulWidget {
   const ImageCarousel({

@@ -1,6 +1,5 @@
-import 'package:flipcart_ui/utils/sub_resource.dart';
 import 'package:flutter/material.dart';
-import '../../utils/resources.dart';
+import '../../resources/resources.dart';
 import '../../widgets/items/group_of_four_items.dart';
 import '../../widgets/items/group_of_three_items.dart';
 import '../../widgets/items/group_of_two_itmes.dart';
