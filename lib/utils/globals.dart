@@ -1,3 +1,4 @@
+import 'package:flipcart_ui/models/group_of_four_item_model.dart';
 import 'package:flipcart_ui/models/item_model.dart';
 import 'package:flutter/material.dart';
 
@@ -82,5 +83,18 @@ final List<ItemModel> groupOfTwoProducts = [
     subTextColor: Colors.grey,
     thirdText: "Up to 70% Off",
     thirdTextColor: Colors.green,
+  ),
+];
+
+final List<GroupOfFourItemModel> listGroupOfFourProducts = [
+  GroupOfFourItemModel(
+    title: "Discounts for You",
+    backgroundColor: const Color.fromARGB(136, 123, 178, 218),
+    children: groupOfFourProducts,
+  ),
+  GroupOfFourItemModel(
+    title: "Suggested Only for You",
+    backgroundColor: const Color.fromARGB(135, 235, 245, 162),
+    children: groupOfFourProducts,
   ),
 ];

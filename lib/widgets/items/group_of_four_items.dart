@@ -1,10 +1,13 @@
+import 'package:flipcart_ui/models/group_of_four_item_model.dart';
 import 'package:flipcart_ui/utils/globals.dart';
 import 'package:flipcart_ui/widgets/group_of_four_item.dart';
 import 'package:flutter/material.dart';
 
 class GroupOfFourItems extends StatelessWidget {
+  final GroupOfFourItemModel itemModel;
   const GroupOfFourItems({
     Key? key,
+    required this.itemModel,
   }) : super(key: key);
 
   @override
@@ -15,7 +18,7 @@ class GroupOfFourItems extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 3),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(136, 123, 178, 218),
+        color: itemModel.backgroundColor,
         border: Border.all(
           color: Colors.grey,
           width: 0.3,
@@ -27,9 +30,9 @@ class GroupOfFourItems extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                "Discounts for You",
-                style: TextStyle(
+              Text(
+                itemModel.title,
+                style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
@@ -58,7 +61,7 @@ class GroupOfFourItems extends StatelessWidget {
             ),
             itemBuilder: (context, index) {
               return GroupOfFourItem(
-                itemModel: groupOfFourProducts[index],
+                itemModel: itemModel.children[index],
               );
             },
           ),

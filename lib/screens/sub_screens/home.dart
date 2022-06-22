@@ -1,3 +1,4 @@
+import 'package:flipcart_ui/utils/globals.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/items/group_of_four_items.dart';
 import '../../widgets/items/group_of_three_items.dart';
@@ -15,18 +16,21 @@ class Home extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.grey[200],
         body: ListView(
-          children: const [
-            SearchBarHeader(),
-            SizedBox(height: 5),
-            HomeListOptions(),
-            SizedBox(height: 5),
-            ImageCarousel(),
-            SizedBox(height: 5),
-            GroupOfThreeItems(),
-            SizedBox(height: 5),
-            GroupOfFourItems(),
-            SizedBox(height: 5),
-            GroupOfTwoItems(),
+          children: [
+            const SearchBarHeader(),
+            const SizedBox(height: 5),
+            const HomeListOptions(),
+            const SizedBox(height: 5),
+            const ImageCarousel(),
+            const SizedBox(height: 5),
+            const GroupOfThreeItems(),
+            const SizedBox(height: 5),
+            GroupOfFourItems(itemModel: listGroupOfFourProducts[0]),
+            const SizedBox(height: 5),
+            const GroupOfTwoItems(),
+            const SizedBox(height: 5),
+            GroupOfFourItems(itemModel: listGroupOfFourProducts[1]),
+            const SizedBox(height: 5),
           ],
         ),
       ),
