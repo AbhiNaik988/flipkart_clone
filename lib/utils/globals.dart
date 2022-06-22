@@ -101,12 +101,12 @@ final List<GroupOfXItemModel> listGroupOfFourProducts = [
 
 final List<GroupOfXItemModel> listGroupOfThreeProducts = [
   GroupOfXItemModel(
-    title: "",
+    title: "Sponsored",
     backgroundColor: Colors.white,
     children: groupOfThreeProducts,
   ),
   GroupOfXItemModel(
-    title: "Sponsored",
+    title: "",
     backgroundColor: Colors.white,
     children: groupOfThreeProducts,
   ),

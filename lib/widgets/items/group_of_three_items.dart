@@ -14,7 +14,7 @@ class GroupOfThreeItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height: 150,
+      height: itemModel.title.isEmpty ? 150 : 180,
       decoration: BoxDecoration(
         color: itemModel.backgroundColor,
         border: Border.all(
@@ -22,13 +22,36 @@ class GroupOfThreeItems extends StatelessWidget {
           width: 0.3,
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: itemModel.children
-            .map((e) => GroupOfThreeItem(
-                  item: e,
-                ))
-            .toList(),
+      child: Column(
+        mainAxisAlignment: itemModel.title.isEmpty
+            ? MainAxisAlignment.center
+            : MainAxisAlignment.spaceEvenly,
+        children: [
+          itemModel.title.isEmpty
+              ? Container()
+              : Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  color: Colors.white,
+                  width: double.infinity,
+                  height: 30,
+                  child: Text(
+                    itemModel.title,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: itemModel.children
+                .map((e) => GroupOfThreeItem(
+                      item: e,
+                    ))
+                .toList(),
+          ),
+        ],
       ),
     );
   }

@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
             const SizedBox(height: 5),
             GroupOfFourItems(itemModel: listGroupOfFourProducts[1]),
             const SizedBox(height: 5),
-            GroupOfThreeItems(itemModel: listGroupOfThreeProducts[0]),
+            GroupOfThreeItems(itemModel: listGroupOfThreeProducts[1]),
             const SizedBox(height: 5),
           ],
         ),
