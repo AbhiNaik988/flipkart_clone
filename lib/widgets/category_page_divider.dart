@@ -15,7 +15,7 @@ class CategoryPageDivider extends StatelessWidget {
         color: Colors.white,
         border: Border.all(
           color: Colors.grey,
-          width: 0.4,
+          width: 0.5,
         ),
       ),
       child: Row(
