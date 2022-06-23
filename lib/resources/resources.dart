@@ -1,4 +1,3 @@
-import 'package:flipcart_ui/models/item_model.dart';
 import 'package:flipcart_ui/resources/sub_resources/group_of_four_lists.dart';
 import 'package:flipcart_ui/resources/sub_resources/group_of_three_lists.dart';
 import 'package:flipcart_ui/resources/sub_resources/group_of_two_lists.dart';

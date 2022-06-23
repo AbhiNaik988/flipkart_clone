@@ -47,10 +47,9 @@ class CategoriesScreen extends StatelessWidget {
                 },
               ),
             ),
-
-            CategoryPageDivider(header: "More on FlipKart"),
+            const CategoryPageDivider(header: "More on FlipKart"),
             const MoreOnFlipkartOptions(),
-            CategoryPageDivider(header: "Trending Stores"),
+            const CategoryPageDivider(header: "Trending Stores"),
             const TrendingStoresOptions(),
           ],
         ),

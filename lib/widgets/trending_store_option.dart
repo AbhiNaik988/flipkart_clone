@@ -61,7 +61,7 @@ class TrendingStoresOption extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 0,
+            bottom: -10,
             right: 0,
             child: SizedBox(
               width: 165,
