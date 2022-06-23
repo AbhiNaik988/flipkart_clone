@@ -10,7 +10,7 @@ class PersistentHeader extends SliverPersistentHeaderDelegate {
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return SizedBox(
       width: double.infinity,
-      height: 65.0,
+      height: 50.0,
       child: Card(
         margin: const EdgeInsets.all(0),
         color: Colors.blue,
@@ -21,10 +21,10 @@ class PersistentHeader extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  double get maxExtent => 65.0;
+  double get maxExtent => 50.0;
 
   @override
-  double get minExtent => 65.0;
+  double get minExtent => 50.0;
 
   @override
   bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {

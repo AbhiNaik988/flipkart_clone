@@ -16,7 +16,6 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: CustomScrollView(
-          physics: const BouncingScrollPhysics(),
           slivers: [
             const HomeScreenHeader(),
             const HomeScreenSearchBar(),
