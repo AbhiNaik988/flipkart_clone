@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 import '../../widgets/category_page_divider.dart';
@@ -27,16 +25,33 @@ class CategoriesScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
-          // ignore: prefer_const_literals_to_create_immutables
           children: [
             // 1 : column of 5 Row (categories options)
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: GridView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: 18,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
+                ),
+                itemBuilder: (context, index) {
+                  return Container(
+                    color: Colors.blue,
+                  );
+                },
+              ),
+            ),
 
             CategoryPageDivider(header: "More on FlipKart"),
-            MoreOnFlipkartOptions(),
+            const MoreOnFlipkartOptions(),
             CategoryPageDivider(header: "Trending Stores"),
-            TrendingStoresOptions(),
-            SizedBox(height: 64),
+            const TrendingStoresOptions(),
           ],
         ),
       ),
