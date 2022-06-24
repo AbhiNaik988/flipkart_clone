@@ -10,20 +10,22 @@ class TrendingStoresOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SliverPadding(
       padding: const EdgeInsets.all(15),
-      child: GridView.builder(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        itemCount: 6,
+      sliver: SliverGrid(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           mainAxisSpacing: 20,
           crossAxisSpacing: 20,
         ),
-        itemBuilder: (context, index) {
-          return TrendingStoresOption(itemModel: trendingStoresItemsLN1[index]);
-        },
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            return TrendingStoresOption(
+              itemModel: trendingStoresItemsLN1[index],
+            );
+          },
+          childCount: trendingStoresItemsLN1.length,
+        ),
       ),
     );
   }

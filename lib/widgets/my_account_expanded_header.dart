@@ -1,4 +1,4 @@
-import 'package:flipcart_ui/widgets/delegates.dart';
+import 'package:flipcart_ui/widgets/delegate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -10,9 +10,9 @@ class MyAccountExpandedHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPersistentHeader(
-      delegate: AccountScreenPresistentHeaderDelegate(
+      delegate: CommanDeligate(
         height: 220,
-        widget: Container(
+        child: Container(
           color: Colors.blue,
           child: Padding(
             padding: const EdgeInsets.all(20),
