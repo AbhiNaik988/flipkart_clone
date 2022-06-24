@@ -36,8 +36,8 @@ class _MainScreenState extends State<MainScreen> {
         controller: pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: const [
-          CategoriesScreen(),
           Home(),
+          CategoriesScreen(),
           NotificationScreen(),
           AccountScreen(),
           CartScreen(),
