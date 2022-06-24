@@ -1,4 +1,4 @@
-import 'package:flipcart_ui/widgets/persistent_header.dart';
+import 'package:flipcart_ui/widgets/delegates.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenHeader extends StatelessWidget {
@@ -11,7 +11,7 @@ class HomeScreenHeader extends StatelessWidget {
     return SliverPersistentHeader(
       pinned: false,
       floating: true,
-      delegate: PersistentHeader(
+      delegate: HomeScreenPersistentHeaderDelegate(
         widget: Row(
           children: [
             Expanded(

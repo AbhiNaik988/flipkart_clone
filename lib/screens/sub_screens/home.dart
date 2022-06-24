@@ -15,6 +15,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.grey[300],
         body: CustomScrollView(
           slivers: [
             const HomeScreenHeader(),

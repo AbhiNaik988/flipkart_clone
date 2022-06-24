@@ -1,4 +1,4 @@
-import 'package:flipcart_ui/widgets/persistent_header.dart';
+import 'package:flipcart_ui/widgets/delegates.dart';
 import 'package:flutter/material.dart';
 
 import 'items/search_bar_item.dart';
@@ -12,7 +12,7 @@ class HomeScreenSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverPersistentHeader(
       pinned: true,
-      delegate: PersistentHeader(
+      delegate: HomeScreenPersistentHeaderDelegate(
         widget: const SearchBarHeader(),
       ),
     );
