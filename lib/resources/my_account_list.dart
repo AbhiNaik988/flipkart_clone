@@ -1,4 +1,5 @@
 import 'package:flipcart_ui/models/my_account_list_model.dart';
+import 'package:flutter/material.dart';
 
 final List<MyAccountListItem> myAccountList = [
   MyAccountListItem(
@@ -90,5 +91,56 @@ final List<MyAccountListItem> myAccountList = [
         "nani desad, gandevi dist-navsari, pin-396360, Gandevi, Gujarat - 396360",
     hasSubtitle: true,
     trailingText: "VIEW 2 MORE",
+  ),
+];
+
+final List<MyAccountBelowListItem> belowListItems = [
+  MyAccountBelowListItem(
+    title: "Notification Preference",
+    hasLeadingIcon: true,
+    hasMarginBelow: false,
+    icon: Icons.notifications,
+  ),
+  MyAccountBelowListItem(
+    title: "Account Settings",
+    hasLeadingIcon: true,
+    hasMarginBelow: true,
+    icon: Icons.settings,
+  ),
+  MyAccountBelowListItem(
+    title: "Help Centre",
+    hasLeadingIcon: false,
+    hasMarginBelow: false,
+    icon: Icons.notifications,
+  ),
+  MyAccountBelowListItem(
+    title: "Sell on Flipkart",
+    hasLeadingIcon: false,
+    icon: Icons.notifications,
+    hasMarginBelow: false,
+  ),
+  MyAccountBelowListItem(
+    title: "Legal",
+    hasLeadingIcon: false,
+    icon: Icons.notifications,
+    hasMarginBelow: false,
+  ),
+  MyAccountBelowListItem(
+    title: "Privacy Policy",
+    hasLeadingIcon: false,
+    hasMarginBelow: true,
+    icon: Icons.notifications,
+  ),
+  MyAccountBelowListItem(
+    title: "Logout of this app",
+    hasLeadingIcon: true,
+    icon: Icons.logout_sharp,
+    hasMarginBelow: false,
+  ),
+  MyAccountBelowListItem(
+    title: "Logout of all devices",
+    hasLeadingIcon: true,
+    icon: Icons.logout_sharp,
+    hasMarginBelow: true,
   ),
 ];

@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class MyAccountListItem {
   final String title;
   final bool hasCorrespondtitle;
@@ -13,5 +15,19 @@ class MyAccountListItem {
     required this.subtitle,
     required this.hasSubtitle,
     required this.trailingText,
+  });
+}
+
+class MyAccountBelowListItem {
+  final String title;
+  final bool hasLeadingIcon;
+  final bool hasMarginBelow;
+  final IconData? icon;
+
+  MyAccountBelowListItem({
+    required this.title,
+    required this.hasLeadingIcon,
+    required this.hasMarginBelow,
+    required this.icon,
   });
 }

@@ -104,3 +104,52 @@ class MyAccountListOption extends StatelessWidget {
     );
   }
 }
+
+class MyAccountBelowListItems extends StatelessWidget {
+  final MyAccountBelowListItem listItem;
+  const MyAccountBelowListItems({
+    Key? key,
+    required this.listItem,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: listItem.hasMarginBelow
+          ? const EdgeInsets.only(bottom: 10)
+          : const EdgeInsets.all(0),
+      padding: const EdgeInsets.symmetric(
+        vertical: 12,
+        horizontal: 10,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(
+          color: Colors.grey,
+          width: 0.3,
+        ),
+      ),
+      child: Row(
+        children: [
+          listItem.hasLeadingIcon
+              ? Icon(
+                  listItem.icon,
+                  color: Colors.grey[600],
+                )
+              : Container(),
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0),
+            child: Text(
+              listItem.title,
+              style: const TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontSize: 18,
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}

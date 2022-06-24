@@ -16,6 +16,7 @@ class AccountScreen extends StatelessWidget {
             MyAccountHeader(),
             MyAccountExpandedHeader(),
             MyAccountListOptions(),
+            MyAccountBelowListOptions(),
           ],
         ),
       ),
