@@ -207,11 +207,11 @@ class SingleCartItem extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.all(10),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   border: Border(
-                    top: BorderSide(color: Colors.grey),
-                    right: BorderSide(color: Colors.grey),
-                    bottom: BorderSide(color: Colors.grey),
+                    top: BorderSide(color: Colors.grey[400]!),
+                    right: BorderSide(color: Colors.grey[400]!),
+                    bottom: BorderSide(color: Colors.grey[400]!),
                   ),
                 ),
                 child: Row(
@@ -229,11 +229,11 @@ class SingleCartItem extends StatelessWidget {
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.all(10),
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     border: Border(
-                      top: BorderSide(color: Colors.grey),
-                      right: BorderSide(color: Colors.grey),
-                      bottom: BorderSide(color: Colors.grey),
+                      top: BorderSide(color: Colors.grey[400]!),
+                      right: BorderSide(color: Colors.grey[400]!),
+                      bottom: BorderSide(color: Colors.grey[400]!),
                     ),
                   ),
                   child: Row(
@@ -251,11 +251,11 @@ class SingleCartItem extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.all(10),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   border: Border(
-                    top: BorderSide(color: Colors.grey),
-                    right: BorderSide(color: Colors.grey),
-                    bottom: BorderSide(color: Colors.grey),
+                    top: BorderSide(color: Colors.grey[400]!),
+                    right: BorderSide(color: Colors.grey[400]!),
+                    bottom: BorderSide(color: Colors.grey[400]!),
                   ),
                 ),
                 child: Row(

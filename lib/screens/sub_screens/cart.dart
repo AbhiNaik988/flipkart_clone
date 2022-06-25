@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/cart_address_container.dart';
 import '../../widgets/items/cart_items.dart';
+import '../../widgets/price_detail_tile.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -19,19 +20,7 @@ class CartScreen extends StatelessWidget {
             ),
             CartAddressContainer(),
             CartItemsList(),
-            // SliverList(
-            //   delegate: SliverChildBuilderDelegate(
-            //     ((context, index) {
-            //       return Container(
-            //         margin: const EdgeInsets.all(10),
-            //         color: Colors.green,
-            //         height: 50,
-            //         width: double.infinity,
-            //       );
-            //     }),
-            //     childCount: 10,
-            //   ),
-            // ),
+            PriceDetailTile(),
           ],
         ),
       ),
