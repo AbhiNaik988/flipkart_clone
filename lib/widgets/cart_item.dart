@@ -202,75 +202,76 @@ class SingleCartItem extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(color: Colors.grey[400]!),
-                    right: BorderSide(color: Colors.grey[400]!),
-                    bottom: BorderSide(color: Colors.grey[400]!),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.save_alt_outlined,
-                      color: Colors.grey,
+          SizedBox(
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey[400]!),
                     ),
-                    SizedBox(width: 5),
-                    Text("Save for later"),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      top: BorderSide(color: Colors.grey[400]!),
-                      right: BorderSide(color: Colors.grey[400]!),
-                      bottom: BorderSide(color: Colors.grey[400]!),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.save_alt_outlined,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(width: 5),
+                        Text("Save for later"),
+                      ],
                     ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Icon(
-                        Icons.delete,
-                        color: Colors.grey,
+                ),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border(
+                        top: BorderSide(color: Colors.grey[400]!),
+                        right: BorderSide(color: Colors.grey[400]!),
+                        bottom: BorderSide(color: Colors.grey[400]!),
                       ),
-                      SizedBox(width: 5),
-                      Text("Remove"),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(color: Colors.grey[400]!),
-                    right: BorderSide(color: Colors.grey[400]!),
-                    bottom: BorderSide(color: Colors.grey[400]!),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(
-                      Icons.cases_outlined,
-                      color: Colors.grey,
                     ),
-                    SizedBox(width: 5),
-                    Text("Buy this now"),
-                  ],
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.delete,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(width: 5),
+                        Text("Remove"),
+                      ],
+                    ),
+                  ),
                 ),
-              )
-            ],
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border(
+                        top: BorderSide(color: Colors.grey[400]!),
+                        right: BorderSide(color: Colors.grey[400]!),
+                        bottom: BorderSide(color: Colors.grey[400]!),
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Icon(
+                          Icons.cases_outlined,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(width: 5),
+                        Text("Buy this now"),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),
