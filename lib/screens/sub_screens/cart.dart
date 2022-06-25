@@ -1,5 +1,5 @@
+import 'package:flipcart_ui/widgets/cart_screen_tab_bar.dart';
 import 'package:flutter/material.dart';
-
 import '../../widgets/cart_address_container.dart';
 import '../../widgets/items/cart_items.dart';
 import '../../widgets/place_order_tile.dart';
@@ -19,12 +19,13 @@ class CartScreen extends StatelessWidget {
               title: Text("My Cart"),
               floating: true,
             ),
+            CartScreenTabBar(),
             CartAddressContainer(),
             CartItemsList(),
             PriceDetailTile(),
-            PlaceOrderTile(),
           ],
         ),
+        bottomSheet: const PlaceOrderTile(),
       ),
     );
   }

@@ -1,4 +1,3 @@
-import 'package:flipcart_ui/models/cart_item_model.dart';
 import 'package:flipcart_ui/resources/cart_items.dart';
 import 'package:flipcart_ui/widgets/cart_item.dart';
 import 'package:flutter/material.dart';
