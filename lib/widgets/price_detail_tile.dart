@@ -10,8 +10,15 @@ class PriceDetailTile extends StatelessWidget {
     return SliverToBoxAdapter(
       key: const Key("priceDetailscontainer"),
       child: Container(
-        color: Colors.white,
+        margin: const EdgeInsets.only(bottom: 15),
         width: double.infinity,
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          border: Border(
+            top: BorderSide(color: Colors.grey, width: 0.5),
+            bottom: BorderSide(color: Colors.grey, width: 0.8),
+          ),
+        ),
         child: Column(
           children: [
             Padding(

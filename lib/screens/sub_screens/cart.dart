@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/cart_address_container.dart';
 import '../../widgets/items/cart_items.dart';
+import '../../widgets/place_order_tile.dart';
 import '../../widgets/price_detail_tile.dart';
 
 class CartScreen extends StatelessWidget {
@@ -21,6 +22,7 @@ class CartScreen extends StatelessWidget {
             CartAddressContainer(),
             CartItemsList(),
             PriceDetailTile(),
+            PlaceOrderTile(),
           ],
         ),
       ),
