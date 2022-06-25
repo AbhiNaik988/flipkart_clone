@@ -1,0 +1,40 @@
+import 'package:flipcart_ui/models/cart_item_model.dart';
+
+final List<CartItem> cartItems = [
+  CartItem(
+    productName: "Mi 30000 mAh Power Bank",
+    productDesc: "Black, Lithium Polymer",
+    productRating: 3,
+    numberOfBuyers: 18049,
+    productPrice: 2699,
+    numberOfOffersAvailable: 3,
+    deliveryDate: "Tue Jun 28",
+    isDelveryFree: true,
+    deliveryFee: 0,
+    productImg: "assets/powerbank.png",
+  ),
+  CartItem(
+    productName: "boAt Rockerz 333 Upto 30 Hours of Power Backup",
+    productDesc: "Cherry Black, In the Ear",
+    productRating: 4,
+    numberOfBuyers: 159534,
+    productPrice: 1299,
+    numberOfOffersAvailable: 4,
+    deliveryDate: "Mon Jun 27",
+    isDelveryFree: false,
+    deliveryFee: 40,
+    productImg: "assets/wireless_headphone.jpg",
+  ),
+  CartItem(
+    productName: "REEBOK Kezar Laceless Walking Sandales",
+    productDesc: "Size: 10, White",
+    productRating: 3,
+    numberOfBuyers: 300,
+    productPrice: 2279,
+    numberOfOffersAvailable: 2,
+    deliveryDate: "Thu Jun 30",
+    isDelveryFree: true,
+    deliveryFee: 0,
+    productImg: "assets/sandals.jpg",
+  ),
+];
