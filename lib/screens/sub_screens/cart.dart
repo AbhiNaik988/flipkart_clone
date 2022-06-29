@@ -46,6 +46,7 @@ class _CartScreenState extends State<CartScreen>
         },
         body: TabBarView(
           controller: _tabController,
+          physics: NeverScrollableScrollPhysics(),
           children: const [
             CartScreenFlipkartTabView(),
             CartScreenGroceryTabView(),
