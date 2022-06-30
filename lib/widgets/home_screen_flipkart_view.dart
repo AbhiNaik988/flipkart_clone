@@ -1,23 +1,26 @@
-import 'package:flipcart_ui/resources/resources.dart';
-import 'package:flipcart_ui/widgets/items/group_of_four_items.dart';
-import 'package:flipcart_ui/widgets/items/group_of_three_items.dart';
-import 'package:flipcart_ui/widgets/items/group_of_two_itmes.dart';
-import 'package:flipcart_ui/widgets/items/home_list_options.dart';
-import 'package:flipcart_ui/widgets/items/image_carousol_item.dart';
-import 'package:flipcart_ui/widgets/items/search_bar_item.dart';
 import 'package:flutter/material.dart';
 
-class Temp extends StatelessWidget {
-  const Temp({Key? key}) : super(key: key);
+import '../resources/resources.dart';
+import 'home_screen_flipkart_search_bar.dart';
+import 'items/group_of_four_items.dart';
+import 'items/group_of_three_items.dart';
+import 'items/group_of_two_itmes.dart';
+import 'items/home_list_options.dart';
+import 'items/image_carousol_item.dart';
+
+class HomeScreenFlipkartView extends StatelessWidget {
+  const HomeScreenFlipkartView({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SearchBarHeader(),
-        Expanded(
-          child: ListView(
-            children: [
+    return CustomScrollView(
+      slivers: [
+        const HomeScreenFlipkartSearchBar(),
+        SliverList(
+          delegate: SliverChildListDelegate.fixed(
+            [
               const HomeListOptions(),
               const SizedBox(height: 5),
               const ImageCarousel(),

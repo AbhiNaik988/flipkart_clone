@@ -54,9 +54,7 @@ class _ImageCarouselState extends State<ImageCarousel> {
         ),
         Positioned(
           bottom: 0,
-          left: MediaQuery.of(context).size.width / 2 -
-              adImageList.length * 10 -
-              10,
+          left: MediaQuery.of(context).size.width / 2 - adImageList.length * 10,
           child: Container(
             margin: const EdgeInsets.only(bottom: 10),
             decoration: BoxDecoration(
@@ -75,7 +73,7 @@ class _ImageCarouselState extends State<ImageCarousel> {
                           });
                         },
                         child: Container(
-                          margin: const EdgeInsets.fromLTRB(10, 3, 5, 3),
+                          margin: const EdgeInsets.fromLTRB(5, 3, 5, 3),
                           width: 10,
                           height: 10,
                           decoration: BoxDecoration(

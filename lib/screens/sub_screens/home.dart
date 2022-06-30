@@ -1,48 +1,54 @@
 import 'package:flutter/material.dart';
-import '../../resources/resources.dart';
+import '../../widgets/home_screen_flipkart_view.dart';
+import '../../widgets/home_screen_grocery_view.dart';
 import '../../widgets/home_screen_header.dart';
-import '../../widgets/home_screen_search_bar.dart';
-import '../../widgets/items/group_of_four_items.dart';
-import '../../widgets/items/group_of_three_items.dart';
-import '../../widgets/items/group_of_two_itmes.dart';
-import '../../widgets/items/home_list_options.dart';
-import '../../widgets/items/image_carousol_item.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> with TickerProviderStateMixin {
+  late TabController _tabController;
+  late ScrollController _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+    _scrollController = ScrollController();
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    _scrollController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.grey[300],
-        body: CustomScrollView(
-          slivers: [
-            const HomeScreenHeader(),
-            const HomeScreenSearchBar(),
-            SliverList(
-              delegate: SliverChildListDelegate.fixed(
-                [
-                  const HomeListOptions(),
-                  const SizedBox(height: 5),
-                  const ImageCarousel(),
-                  const SizedBox(height: 5),
-                  GroupOfThreeItems(itemModel: listGroupOfThreeProducts[0]),
-                  const SizedBox(height: 5),
-                  GroupOfFourItems(itemModel: listGroupOfFourProducts[0]),
-                  const SizedBox(height: 5),
-                  GroupOfTwoItems(itemModel: listGroupOfTwoProducts[0]),
-                  const SizedBox(height: 5),
-                  GroupOfFourItems(itemModel: listGroupOfFourProducts[1]),
-                  const SizedBox(height: 5),
-                  GroupOfTwoItems(itemModel: listGroupOfTwoProducts[1]),
-                  const SizedBox(height: 5),
-                  GroupOfThreeItems(itemModel: listGroupOfThreeProducts[1]),
-                  const SizedBox(height: 5),
-                ],
-              ),
-            ),
-          ],
+        body: NestedScrollView(
+          controller: _scrollController,
+          floatHeaderSlivers: true,
+          headerSliverBuilder: (context, innerBoxIsScrolled) {
+            return [
+              HomeScreenHeader(tabController: _tabController),
+            ];
+          },
+          body: TabBarView(
+            controller: _tabController,
+            physics: const NeverScrollableScrollPhysics(),
+            children: const [
+              HomeScreenFlipkartView(),
+              HomeScreenGroceryView(),
+            ],
+          ),
         ),
       ),
     );

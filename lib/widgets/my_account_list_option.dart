@@ -12,13 +12,13 @@ class MyAccountListOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AuthenticationProvider _provider =
+    AuthenticationProvider provider =
         Provider.of<AuthenticationProvider>(context);
 
     void onClickedTrailingText(int listItemId) {
       switch (listItemId) {
         case 1:
-          _provider.setAuthentiated();
+          provider.setAuthentiated();
           break;
       }
     }

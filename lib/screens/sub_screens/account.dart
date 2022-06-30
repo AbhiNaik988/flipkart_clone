@@ -24,8 +24,8 @@ class _AccountScreenState extends State<AccountScreen> {
         body: isAuthenticated
             ? CustomScrollView(
                 slivers: [
-                  MyAccountHeader(),
-                  MyAccountExpandedHeader(),
+                  const MyAccountHeader(),
+                  const MyAccountExpandedHeader(),
                   MyAccountListOptions(isAuthenticated: isAuthenticated),
                   MyAccountBelowListOptions(isAuthenticated: isAuthenticated),
                 ],
