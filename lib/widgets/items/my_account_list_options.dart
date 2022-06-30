@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import '../my_account_list_option.dart';
 
 class MyAccountListOptions extends StatelessWidget {
+  final bool isAuthenticated;
   const MyAccountListOptions({
     Key? key,
+    required this.isAuthenticated,
   }) : super(key: key);
 
   @override
@@ -15,9 +17,14 @@ class MyAccountListOptions extends StatelessWidget {
       sliver: SliverList(
         delegate: SliverChildBuilderDelegate(
           (context, index) {
-            return MyAccountListOption(listItem: myAccountList[index]);
+            return MyAccountListOption(
+                listItem: isAuthenticated
+                    ? myAuthenticatedAccountList[index]
+                    : myUnauthenticatedAccountList[index]);
           },
-          childCount: myAccountList.length,
+          childCount: isAuthenticated
+              ? myAuthenticatedAccountList.length
+              : myUnauthenticatedAccountList.length,
         ),
       ),
     );
@@ -25,8 +32,10 @@ class MyAccountListOptions extends StatelessWidget {
 }
 
 class MyAccountBelowListOptions extends StatelessWidget {
+  final bool isAuthenticated;
   const MyAccountBelowListOptions({
     Key? key,
+    required this.isAuthenticated,
   }) : super(key: key);
 
   @override
@@ -35,10 +44,14 @@ class MyAccountBelowListOptions extends StatelessWidget {
       delegate: SliverChildBuilderDelegate(
         (context, index) {
           return MyAccountBelowListItems(
-            listItem: belowListItems[index],
+            listItem: isAuthenticated
+                ? belowAuthenticatedListItems[index]
+                : belowUnauthenticatedListItems[index],
           );
         },
-        childCount: 8,
+        childCount: isAuthenticated
+            ? belowAuthenticatedListItems.length
+            : belowUnauthenticatedListItems.length,
       ),
     );
   }

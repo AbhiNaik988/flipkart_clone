@@ -1,7 +1,34 @@
 import 'package:flipcart_ui/models/my_account_list_model.dart';
 import 'package:flutter/material.dart';
 
-final List<MyAccountListItem> myAccountList = [
+final List<MyAccountListItem> myUnauthenticatedAccountList = [
+  MyAccountListItem(
+    title: "My Account",
+    hasCorrespondtitle: false,
+    correspondtitle: "",
+    subtitle: "",
+    hasSubtitle: false,
+    trailingText: "Sign in",
+  ),
+  MyAccountListItem(
+    title: "Choose Language",
+    hasCorrespondtitle: true,
+    correspondtitle: "English",
+    subtitle: "",
+    hasSubtitle: false,
+    trailingText: "CHOOSE LANGUAGE",
+  ),
+  MyAccountListItem(
+    title: "My Whishlist",
+    hasCorrespondtitle: false,
+    correspondtitle: "",
+    subtitle: "",
+    hasSubtitle: false,
+    trailingText: "VIEW YOUR WHISHILST",
+  ),
+];
+
+final List<MyAccountListItem> myAuthenticatedAccountList = [
   MyAccountListItem(
     title: "Flipkart Plus",
     hasCorrespondtitle: false,
@@ -94,7 +121,7 @@ final List<MyAccountListItem> myAccountList = [
   ),
 ];
 
-final List<MyAccountBelowListItem> belowListItems = [
+final List<MyAccountBelowListItem> belowAuthenticatedListItems = [
   MyAccountBelowListItem(
     title: "Notification Preference",
     hasLeadingIcon: true,
@@ -142,5 +169,38 @@ final List<MyAccountBelowListItem> belowListItems = [
     hasLeadingIcon: true,
     icon: Icons.logout_sharp,
     hasMarginBelow: true,
+  ),
+];
+
+final List<MyAccountBelowListItem> belowUnauthenticatedListItems = [
+  MyAccountBelowListItem(
+    title: "Notification Preference",
+    hasLeadingIcon: true,
+    hasMarginBelow: true,
+    icon: Icons.notifications,
+  ),
+  MyAccountBelowListItem(
+    title: "Help Centre",
+    hasLeadingIcon: false,
+    hasMarginBelow: false,
+    icon: Icons.notifications,
+  ),
+  MyAccountBelowListItem(
+    title: "Sell on Flipkart",
+    hasLeadingIcon: false,
+    icon: Icons.notifications,
+    hasMarginBelow: false,
+  ),
+  MyAccountBelowListItem(
+    title: "Legal",
+    hasLeadingIcon: false,
+    icon: Icons.notifications,
+    hasMarginBelow: false,
+  ),
+  MyAccountBelowListItem(
+    title: "Privacy Policy",
+    hasLeadingIcon: false,
+    hasMarginBelow: true,
+    icon: Icons.notifications,
   ),
 ];
