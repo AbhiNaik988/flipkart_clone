@@ -1,14 +1,22 @@
+import 'package:flipcart_ui/providers/authentication_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../widgets/items/my_account_list_options.dart';
 import '../../widgets/my_account_expanded_header.dart';
 import '../../widgets/my_account_header.dart';
 
-class AccountScreen extends StatelessWidget {
+class AccountScreen extends StatefulWidget {
   const AccountScreen({Key? key}) : super(key: key);
 
   @override
+  State<AccountScreen> createState() => _AccountScreenState();
+}
+
+class _AccountScreenState extends State<AccountScreen> {
+  @override
   Widget build(BuildContext context) {
-    bool isAuthenticated = false;
+    bool isAuthenticated =
+        Provider.of<AuthenticationProvider>(context).isUserAuthenticated;
 
     return SafeArea(
       child: Scaffold(

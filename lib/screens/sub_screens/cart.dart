@@ -1,6 +1,5 @@
 import 'package:flipcart_ui/widgets/delegate.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../../widgets/cart_screen_flipkart_tabbar_view.dart';
 import '../../widgets/cart_screen_grocery_view.dart';
 
@@ -87,7 +86,7 @@ class _CartScreenState extends State<CartScreen>
             physics: const NeverScrollableScrollPhysics(),
             controller: _tabController,
             children: const [
-              CartScreenFlipkartTabView(isAuthenticated: true),
+              CartScreenFlipkartTabView(),
               CartScreenGroceryTabView(),
             ],
           ),

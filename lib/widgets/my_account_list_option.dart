@@ -1,5 +1,7 @@
 import 'package:flipcart_ui/models/my_account_list_model.dart';
+import 'package:flipcart_ui/providers/authentication_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class MyAccountListOption extends StatelessWidget {
   final MyAccountListItem listItem;
@@ -10,6 +12,17 @@ class MyAccountListOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthenticationProvider _provider =
+        Provider.of<AuthenticationProvider>(context);
+
+    void onClickedTrailingText(int listItemId) {
+      switch (listItemId) {
+        case 1:
+          _provider.setAuthentiated();
+          break;
+      }
+    }
+
     return Container(
       margin: const EdgeInsets.symmetric(
         vertical: 7,
@@ -48,14 +61,14 @@ class MyAccountListOption extends StatelessWidget {
                   ),
                 ),
                 listItem.hasCorrespondtitle
-                    ? const Padding(
-                        padding: EdgeInsets.symmetric(
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 10,
                         ),
                         child: Text(
-                          "English",
+                          listItem.correspondtitle,
                           textAlign: TextAlign.start,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,
                             fontSize: 15,
@@ -90,11 +103,14 @@ class MyAccountListOption extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(vertical: 10),
               width: double.infinity,
-              child: Text(
-                listItem.trailingText,
-                textAlign: TextAlign.end,
-                style: const TextStyle(
-                  color: Colors.blue,
+              child: InkWell(
+                onTap: () => onClickedTrailingText(listItem.listId),
+                child: Text(
+                  listItem.trailingText,
+                  textAlign: TextAlign.end,
+                  style: const TextStyle(
+                    color: Colors.blue,
+                  ),
                 ),
               ),
             ),
@@ -114,6 +130,17 @@ class MyAccountBelowListItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthenticationProvider provider =
+        Provider.of<AuthenticationProvider>(context);
+
+    onClickBelowListItemText(int listId) {
+      switch (listId) {
+        case 7:
+          provider.setUnauthenticate();
+          break;
+      }
+    }
+
     return Container(
       margin: listItem.hasMarginBelow
           ? const EdgeInsets.only(bottom: 10)
@@ -139,12 +166,15 @@ class MyAccountBelowListItems extends StatelessWidget {
               : Container(),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
-            child: Text(
-              listItem.title,
-              style: const TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w400,
-                fontSize: 18,
+            child: InkWell(
+              onTap: () => onClickBelowListItemText(listItem.listId),
+              child: Text(
+                listItem.title,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 18,
+                ),
               ),
             ),
           )

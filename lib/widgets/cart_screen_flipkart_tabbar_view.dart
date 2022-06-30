@@ -1,19 +1,22 @@
+import 'package:flipcart_ui/providers/authentication_provider.dart';
 import 'package:flipcart_ui/widgets/place_order_tile.dart';
 import 'package:flipcart_ui/widgets/price_detail_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 import 'cart_address_container.dart';
 import 'items/cart_items.dart';
 
 class CartScreenFlipkartTabView extends StatelessWidget {
-  final bool isAuthenticated;
   const CartScreenFlipkartTabView({
     Key? key,
-    required this.isAuthenticated,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    bool isAuthenticated =
+        Provider.of<AuthenticationProvider>(context).isUserAuthenticated;
+
     return Scaffold(
       body: isAuthenticated
           ? const CustomScrollView(
