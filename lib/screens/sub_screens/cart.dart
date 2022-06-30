@@ -87,7 +87,7 @@ class _CartScreenState extends State<CartScreen>
             physics: const NeverScrollableScrollPhysics(),
             controller: _tabController,
             children: const [
-              CartScreenFlipkartTabView(),
+              CartScreenFlipkartTabView(isAuthenticated: true),
               CartScreenGroceryTabView(),
             ],
           ),

@@ -12,23 +12,24 @@ class AccountScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.grey[300],
-          body: isAuthenticated
-              ? CustomScrollView(
-                  slivers: [
-                    MyAccountHeader(),
-                    MyAccountExpandedHeader(),
-                    MyAccountListOptions(isAuthenticated: isAuthenticated),
-                    MyAccountBelowListOptions(isAuthenticated: isAuthenticated),
-                  ],
-                )
-              : CustomScrollView(
-                  slivers: [
-                    const MyAccountHeader(),
-                    MyAccountListOptions(isAuthenticated: isAuthenticated),
-                    MyAccountBelowListOptions(isAuthenticated: isAuthenticated),
-                  ],
-                )),
+        backgroundColor: Colors.grey[300],
+        body: isAuthenticated
+            ? CustomScrollView(
+                slivers: [
+                  MyAccountHeader(),
+                  MyAccountExpandedHeader(),
+                  MyAccountListOptions(isAuthenticated: isAuthenticated),
+                  MyAccountBelowListOptions(isAuthenticated: isAuthenticated),
+                ],
+              )
+            : CustomScrollView(
+                slivers: [
+                  const MyAccountHeader(),
+                  MyAccountListOptions(isAuthenticated: isAuthenticated),
+                  MyAccountBelowListOptions(isAuthenticated: isAuthenticated),
+                ],
+              ),
+      ),
     );
   }
 }
