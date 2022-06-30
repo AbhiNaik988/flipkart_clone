@@ -1,4 +1,5 @@
 import 'package:flipcart_ui/widgets/cart_screen_tab_bar.dart';
+import 'package:flipcart_ui/widgets/delegate.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/cart_screen_flipkart_tabbar_view.dart';
 import '../../widgets/cart_screen_grocery_view.dart';
@@ -32,25 +33,63 @@ class _CartScreenState extends State<CartScreen>
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: NestedScrollView(
-        controller: _scrollController,
-        floatHeaderSlivers: true,
-        headerSliverBuilder: (context, boxIsScrolled) {
-          return [
-            const SliverAppBar(
-              title: Text("My Cart"),
-              floating: true,
-            ),
-            CartScreenTabBar(tabController: _tabController)
-          ];
-        },
-        body: TabBarView(
-          controller: _tabController,
-          physics: NeverScrollableScrollPhysics(),
-          children: const [
-            CartScreenFlipkartTabView(),
-            CartScreenGroceryTabView(),
-          ],
+      child: Scaffold(
+        body: NestedScrollView(
+          controller: _scrollController,
+          floatHeaderSlivers: true,
+          headerSliverBuilder: (context, innerBoxIsScrolled) {
+            return [
+              const SliverAppBar(
+                title: Text("My Cart"),
+                floating: true,
+              ),
+              SliverPersistentHeader(
+                pinned: true,
+                delegate: CommanDeligate(
+                  height: 60,
+                  child: Container(
+                    color: Colors.white,
+                    child: TabBar(
+                      controller: _tabController,
+                      physics: const NeverScrollableScrollPhysics(),
+                      labelColor: Colors.blue,
+                      unselectedLabelColor: Colors.black54,
+                      indicatorColor: Colors.blueAccent,
+                      indicatorWeight: 3,
+                      indicatorSize: TabBarIndicatorSize.tab,
+                      tabs: const [
+                        Tab(
+                          child: Text(
+                            "Flipkart",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 19,
+                            ),
+                          ),
+                        ),
+                        Tab(
+                          child: Text(
+                            "Grocery",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 19,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ];
+          },
+          body: TabBarView(
+            controller: _tabController,
+            children: const [
+              CartScreenFlipkartTabView(),
+              CartScreenGroceryTabView(),
+            ],
+          ),
         ),
       ),
     );
