@@ -14,11 +14,11 @@ class CartScreenFlipkartTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isAuthenticated =
-        Provider.of<AuthenticationProvider>(context).isUserAuthenticated;
+    AuthenticationProvider provider =
+        Provider.of<AuthenticationProvider>(context);
 
     return Scaffold(
-      body: isAuthenticated
+      body: provider.isUserAuthenticated
           ? const CustomScrollView(
               slivers: [
                 CartAddressContainer(),
@@ -58,7 +58,7 @@ class CartScreenFlipkartTabView extends StatelessWidget {
                     ),
                     const SizedBox(height: 30),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => provider.setAuthentiated(),
                       child: const Padding(
                         padding: EdgeInsets.symmetric(
                           horizontal: 40,
@@ -74,7 +74,7 @@ class CartScreenFlipkartTabView extends StatelessWidget {
                 ),
               ),
             ),
-      bottomSheet: isAuthenticated ? const PlaceOrderTile() : null,
+      bottomSheet: provider.isUserAuthenticated ? const PlaceOrderTile() : null,
     );
   }
 }
